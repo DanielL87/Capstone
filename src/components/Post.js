@@ -6,6 +6,7 @@ function Post(props){
     <div>
        <h3>{props.names}</h3>
         <p><em>{props.message}</em></p>
+        <h4>{props.formattedWaitTime}</h4>
     </div>
   );
 }

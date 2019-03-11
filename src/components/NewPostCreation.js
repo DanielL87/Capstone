@@ -1,6 +1,6 @@
 import React from 'react'
 import { v4 } from 'uuid'
-
+import Moment from 'moment'
 
 function NewPostCreation(props) {
     let _names = null
@@ -8,7 +8,7 @@ function NewPostCreation(props) {
 
     function handleNewPost(event) {
         event.preventDefault()
-        props.NewPost({ names: _names.value, message: _message.value, id: v4() })
+        props.NewPost({ names: _names.value, message: _message.value, likes: 0, dislikes: 0, id: v4(), timePosted: new Moment() })
         _names.value = ''
         _message.value = ''
       }
