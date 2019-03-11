@@ -3,7 +3,17 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color: rgb(126, 117, 117);
   color: white;
   text-align: center;
 }
+
+.userImage {
+  height: 100;
+  width: 100;
+}
+
+h3 {
+  color: blue;
+}
+

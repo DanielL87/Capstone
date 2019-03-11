@@ -43,8 +43,28 @@ class PostList extends React.Component{
     this.setState({ masterPostList: newMasterPostList })
   }
 
+  addLike(id) {
+    for (let post of this.state.masterPostList) {
+      if (post.id === id) {
+        post.likes++
+        let newState = Object.assign({}, this.state.masterPostList, post)
+        this.setState({ newState })
+
+      }
+    }
+  }
+
+  addDislike(id) {
+    for (let post of this.state.masterPostList) {
+      if (post.id === id) {
+        post.dislikes++
+        let newState = Object.assign({}, this.state.masterPostList, post)
+        this.setState({ newState })
+      }
+    }
+  }
+
   render() {
-    console.log(this.state.masterPostList)
     return (
       <div>
         <NewPostCreation NewPost={this.handleAddingNewPostToList}/>
@@ -52,7 +72,12 @@ class PostList extends React.Component{
         <Post 
         names={post.names}
         message={post.message}
+        likes={post.likes}
+        dislikes={post.dislikes}
         formattedWaitTime={post.formattedWaitTime}
+        key={post.id}
+        addLike={() => this.addLike(post.id)}
+        addDislike={() => this.addDislike(post.id)}
         />
         )}
       </div>

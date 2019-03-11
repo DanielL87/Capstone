@@ -1,6 +1,7 @@
 import React from 'react'
 import { v4 } from 'uuid'
 import Moment from 'moment'
+import '../App.css'
 
 function NewPostCreation(props) {
     let _names = null
@@ -14,7 +15,7 @@ function NewPostCreation(props) {
       }
   
     return (
-        <div >
+        <div className='input'>
           <form onSubmit={handleNewPost}>
             <input type="text" placeholder="User Name" id='names' ref={(input) => { _names = input }} />
             <br />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import News from './components/News';
+import User from './components/User';
 import PostList from './components/PostList';
 import SideBar from './components/SideBar';
 import Footer from './components/Footer';
@@ -15,8 +16,11 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <hr/>
+        <News />
+        <hr/>
         <div style={wrapper}>
-          <News />
+          <User />
           <PostList />
           <SideBar />
         </div>
