@@ -8,11 +8,12 @@ class PostList extends React.Component{
     this.state = {
       masterPostList: []
     }
+    this.handleAddingNewPostToList = this.handleAddingNewPostToList.bind(this)
   }
 
   handleAddingNewPostToList(newPost) {
     var newMasterPostList = this.state.masterPostList.slice()
-    Post = newPost
+    let Post = newPost
     newMasterPostList.push(Post)
     this.setState({ masterPostList: newMasterPostList })
   }
@@ -20,9 +21,13 @@ class PostList extends React.Component{
   render() {
     return (
       <div>
-        <h1>PostList Works</h1>
-        <Post />
-        <NewPostCreation />
+        <NewPostCreation NewPost={this.handleAddingNewPostToList}/>
+        {this.state.masterPostList.map((post) =>
+        <Post 
+        names={post.names}
+        message={post.message}
+        />
+        )}
       </div>
     );
   }
