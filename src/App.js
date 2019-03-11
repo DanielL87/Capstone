@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import News from './components/News';
+import ChatList from './components/ChatList';
+import SideBar from './components/SideBar';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
+    let wrapper = {
+      display: 'grid',
+      gridTemplateColumns: '2fr 2fr 2fr'
+    }
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <div>
+        <Header />
+        <div style={wrapper}>
+          <News />
+          <ChatList />
+          <SideBar />
+        </div>
+        <Footer />
+      </div>  
     );
   }
 }
