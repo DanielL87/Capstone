@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import News from './components/News';
+import PusherFeed from './components/Pusher';
 import User from './components/User';
 import PostList from './components/PostList';
 import SideBar from './components/SideBar';
@@ -17,7 +17,9 @@ class App extends Component {
       <div>
         <Header />
         <hr/>
-        <News />
+        <div id='newsHeader'>
+        <PusherFeed />
+        </div>
         <hr/>
         <div style={wrapper}>
           <User />
