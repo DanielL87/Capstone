@@ -5,6 +5,9 @@ import User from './components/User';
 import PostList from './components/PostList';
 import SideBar from './components/SideBar';
 import Footer from './components/Footer';
+import Notifications from './components/Notifications';
+import { Router, Route, Switch } from 'react-router'
+
 import './App.css'
 
 class App extends Component {
@@ -23,7 +26,10 @@ class App extends Component {
         <hr/>
         <div style={wrapper}>
           <User />
-          <PostList />
+            <Switch>
+              <Route exact path='/' component={PostList} />
+              <Route path='/notifications' component={Notifications}/>
+            </Switch>
           <SideBar />
         </div>
         <Footer />

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Pusher from 'pusher-js';
-import pushid from 'pushid';
 import '../App.css'
 
 class PusherFeed extends Component {
@@ -15,7 +14,7 @@ class PusherFeed extends Component {
     fetch(`https://newsapi.org/v2/everything?q=bitcoin&from=2019-02-13&sortBy=publishedAt&apiKey=01369db0360c474da9a84b1fef6f6047`)
       .then(response => response.json())
       .then(articles => {
-          console.log(articles.articles)
+        console.log(articles.articles)
         this.setState({
           newsItems: articles.articles,
         });
@@ -42,7 +41,7 @@ class PusherFeed extends Component {
         <ul>
             {this.state.newsItems.map((post) =>
             <div>
-                <img src={post.urlToImage} className='articleImage'></img>
+                <img src={post.urlToImage} className='articleImage' alt=''></img>
                 <li><a href={`${post.url}`}>{post.title}</a></li>
             </div>
 

@@ -20,16 +20,16 @@ function NewPostCreation(props) {
         height: 115,
         gridTemplateColumns: '1fr 4fr'
       }
-      let profileIcon = {
-        borderStyle: 'solid',
-        height: 40,
-        width: 40,
-        backgroundColor: 'black',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        marginTop: '25',
-        marginBottom: 'auto',
-      }
+      // let profileIcon = {
+      //   borderStyle: 'solid',
+      //   height: 40,
+      //   width: 40,
+      //   backgroundColor: 'black',
+      //   marginLeft: 'auto',
+      //   marginRight: 'auto',
+      //   marginTop: '25',
+      //   marginBottom: 'auto',
+      // }
       let input = {
         marginLeft: 'auto',
         marginRight: 'auto',
